@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enquiry</title>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="container">    
+        
+            <a class="logo" href="index.html">
+                FreeLancing Company
+            </a>
+
+            <nav class="nav-bars">
+git log --oneline
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="enquiry_form.html">Enquiry</a></li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="Sec-main">
+
+            <div class="container">
+
+                <span class="paragraph">Start a project</span>
+                <h1>Tell us what you want to build.</h1>
+                <p class="form-description">Fill the form below and required information should be filled and it is marked as *(required). The information you filled will be automatically saved. So, later you can come and fill the form.</p>
+
+            </div>
+
+            <div>
+
+                <section class="enquiry-section">
+
+                    <form class="enquiry-form" novalidate>
+
+                        <div id="enquiry-status" class="enquiry-status" role="status" aria-live="polite"></div>
+
+                        <div class="form-fill">
+
+                            <label for="first-name">First Name *</label>
+                            <input type="text" id="first-name" name="FirstName" autocomplete="given-name" aria-describedby="first-name-error">
+                            <p id="first-name-error" class="first-name-error-message" role="alert" aria-live="polite"></p>
+
+                        </div> <br>
+
+                        <div class="form-fill">
+
+                            <label for="last-name">Last Name *</label>
+                            <input type="text" id="last-name" name="LastName" autocomplete="family-name" aria-describedby="last-name-error">
+                            <p id="last-name-error" class="error-message" role="alert" aria-live="polite"></p>
+
+                        </div> <br>
+
+                        <div class="form-fill">
+
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="Email" autocomplete="email" aria-describedby="email-error">
+                            <p id="email-error" class="email-error-message" role="alert" aria-live="polite"></p>
+
+                        </div> <br>
+
+                        <div class="form-fill">
+
+                            <label for="phone-number">Phone Number (optional)</label>
+                            <input type="tel" id="phone-number" name="Phone" placeholder="+44 6281327544" autocomplete="tel" aria-describedby="phone-number-error">
+                            <p id="phone-number-error" class="phone-number-error-message" role="alert" aria-live="polite"></p>
+                        </div> <br>
+
+                        <div class="form-fill">
+
+                            <label for="project">Type of Project *</label>
+                            <select id="project" name="project" aria-describedby="type-of-project-error">
+                                <option value="">Website Development</option>
+                                <option value="">UI/UX Design</option>
+                                <option value="">Desktop/Mobile Application Development</option>
+                                <option value="">Artificial Intelligence</option>
+                                <option value="">Game Development</option>
+                                <option value="">Cloud Development</option>
+                            </select>
+                            <p id="type-of-project-error" class="error-message" role="alert" aria-live="polite"></p>
+
+                        </div>
+
+                        <div class="form-fill">
+
+                            <fieldset>
+                                <legend>Budget Range for Project *</legend>
+                                <label class="radio"><input type="radio" name="budget" value="under-4k">under £4000</label>
+                                <label class="radio"><input type="radio" name="budget" value="4k-8k">£4000 - £8000</label>
+                                <label class="radio"><input type="radio" name="budget" value="8k-15k">£8000 - £15000</label>
+                                <label class="radio"><input type="radio" name="budget" value="15k-over">Over £15000</label>
+                                <label class="radio"><input type="radio" name="budget" value="not-fixed">Not fixed yet</label>
+                            </fieldset>
+                            <p id="budget-error" class="error-message" role="alert" aria-live="polite"></p>
+                            
+                        </div> <br>
+
+                        <div class="form-fill">
+
+                            <label for="project-details">Project Details *</label>
+
+                            <textarea id="project-details" name="projectdetails" rows="10" cols="40" aria-describedby="project-details-error text-error"></textarea>
+                            <p>0/1000 Words</p>
+                            <p id="project-details-error" class="text-error" role="alert" aria-live="polite"></p>
+
+                        </div>
+
+                        <div class="checkbox-agreed">
+
+                            <label class="checkbox"><input type="checkbox" id="agreed" name="agreed" aria-describedby="agreed-info"> I agree that the information provided is accurate and complete. *</label>
+                            <p id="agreed-error" class="agreed-info-error" role="alert" aria-live="polite"></p>    
+
+                        </div>
+
+                        <div class="checkbox-agreed">
+
+                            <label class="checkbox"><input type="checkbox" id="agreed" name="agreed" aria-describedby="agreed-enquiry"> I agree to be contacted by the team about the enquiry. *</label>
+                            <p id="agreed-error" class="agreed-enquiry-error" role="alert" aria-live="polite"></p>    
+
+                        </div>
+
+                        <div class="form-behaviour">
+
+                            <button type="submit" class="submit-enquiry">Submit enquiry</button> 
+                            <button type="button" class="reset-enquiry">Reset Enquiry</button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+                <div class="enquiry-contact">
+
+                    <h2>If you want to contact us directly? Please use the contact information below.</h2>
+
+                    <a href="freelancing@gmail.com">freelancing@gmail.com</a> <br> <br>
+
+                    <a href="tel:+44 7245918491">+44 7245918491</a>
+                    
+                    <p>We will get back to you within the 4 working days. This form and you're provided information will save only to you're browser. we will only get this inforamtion when you sbmit the form.</p>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="top-footer">
+
+        <div class="container">
+
+            <h2>FreeLancing Company</h2>
+
+            <p>This comapny is a leading brand and the solution for you're project and business.</p>
+
+        </div>
+
+        <div>
+            <h2>Contact Information</h2>
+
+            <ul>
+
+                <li><a href="freelancing@gmail.com">freelancing@gmail.com</a></li>
+                <li><a href="tel:+44 7245918491">+44 7245918491</a></li>
+
+            </ul>
+
+        </div>
+
+        <footer class="bottom-footer">
+
+            <div class="container">
+
+                <p>copyright &copy Company Established Date: 2026. Buid by person A B and C</p>
+
+            </div>
+
+</body>
+
+</html>
