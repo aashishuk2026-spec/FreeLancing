@@ -12,15 +12,6 @@
             <a href="index.html" class="logo" aria-label="Volta Studio home">
                 Glitch<span class="logo-dot">.</span>And Grit
             </a>
-
-            <!-- Hamburger for mobile (toggled by nav.js) -->
-            <button class="nav-toggle" id="navToggle"
-                    aria-label="Toggle navigation menu"
-                    aria-expanded="false"
-                    aria-controls="navLinks">
-                <span class="hamburger" aria-hidden="true"></span>
-            </button>
-
             <ul class="nav-links" id="navLinks" role="list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
@@ -31,7 +22,7 @@
         </nav>
     </header>
     <main>
-
+        <section class="page-hero" aria-labelledby="hero-heading">
         <div class="team-hero">
         <h4>The People</h4>
         <h1>Meet the Team</h1>
@@ -45,16 +36,11 @@
              making things that last.
             </p>
         </div>
+        </section>
 
-        <div class="team-grid">
-            <!-- member 1 -->
-            <article  class="flip">
-
-                <div class="flip-inner"> 
-                            <div class="flip-card-front">
-                                <div class="member-avatar" style="background: var(--accent)">
-                                    <span class="avatar-initials">HS</span>
-                                </div>
+        <section class="team-section" aria-labelledby="team-heading">
+            <div class="team">
+                <div class="mem-1"> 
                                 <h3 class="member-name">Harvey Specter</h3>
                                 <p class="member-role">Creative Director</p>
                                 <div class="member-skills" aria-label="Skills">
@@ -64,9 +50,66 @@
                                 </div>
                                 <span class="flip-hint" aria-hidden="true">Hover to learn more</span>
                             </div>
-            </article>
-        </div>
+                </div>
+                                <div class="mem-2"> 
+                                <h3 class="member-name">Mike ross</h3>
+                                <p class="member-role">Lead Developer</p>
+                                <div class="member-skills" aria-label="Skills">
+                                    <span class="skill-tag">HTML/CSS</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">React</span>
+                                </div>
+                                <span class="flip-hint" aria-hidden="true">Hover to learn more</span>
+                            </div>
+                </div>
+                                <div class="mem-3"> 
+                                <h3 class="member-name">Louis Litt</h3>
+                                <p class="member-role">Motion Designer</p>
+                                <div class="member-skills" aria-label="Skills">
+                                    <span class="skill-tag">Animation</span>
+                                    <span class="skill-tag">CSS Animations</span>
+                                    <span class="skill-tag">Video</span>
+                                </div>
+                                <span class="flip-hint" aria-hidden="true">Hover to learn more</span>
+                            </div>
+                </div>
+
+                <!-- Our Values -->
+                <div class="head">
+                <h4>What we stand for</h4>
+                <h1>Our Values</h1>
+                </div>
+                <div class="values">
+                    <div class="one">
+                        <h3>Craft First</h3>
+                        <p>We don't ship things we're not proud of. Every pixel, every interaction, every line of code is considered.</p>
+                    </div>
+                     <div class="two">
+                        <h3>Collaboration</h3>
+                        <p>We believe in the power of teamwork. Together, we achieve more than we ever could alone.</p>
+                    </div>
+                    <div class="three">
+                        <h3>Always Learning</h3>
+                        <p>The industry moves fast. We stay curious, keep experimenting, and share what we discover with the community.</p>
+                    </div>
+                </div>
+                <!-- Banner -->
+                 <div class="banner">
+                    <h4>Want to work with us?</h4>
+                    <p>We're always open to interesting projects and great conversations.</p>
+                    <a href="contact.html" class="banner-cta">Start a project</a>
+                 </div>
     </main>
-    
+    <!-- footer -->
+     <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Glitch.And Grit. All rights reserved.</p>
+            <ul class="footer-links" role="list">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+     </footer>
 </body>
 </html>
