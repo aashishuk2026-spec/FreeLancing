@@ -1,49 +1,20 @@
-
-:root {
-            accent:        #5C3BF4;
-            accent-light:  #EEE8FF;
-            accent-mid:    #9B8AF0;
-            dark:          #0D0B1E;
-            dark-2:        #1A1730;
-            text:          #1A1A2A;
-            text-muted:    #7B7A8E;
-            text-light:    #B8B6CC;
-            border:        #E8E7F5;
-            bg:            #FFFFFF;
-            bg-soft:       #F8F7FF;
-            radius-card:   16px;
-            radius-btn:    8px;
-            transition:    0.3s ease;
-            font:          'Inter', system-ui, -apple-system, sans-serif;
-        }
-
-.site-header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: var(--dark);
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-        }
-.navbar {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-            height: 64px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-.logo {
-            font-size: 20px;
-            font-weight: 700;
-            color: #fff;
-            letter-spacing: -0.5px;
-        }
-.logo-dot { color: var(--accent); }
-
-.nav-links {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
+body{
+  padding: 80px;
+}
+.team-card{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.team-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.skill-tag{
+  display : inline-block;
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 0.25rem 0.6rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  margin: 0.2rem;
+}
