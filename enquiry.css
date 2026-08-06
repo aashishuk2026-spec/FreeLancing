@@ -1,7 +1,8 @@
+/* Google font */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 
-
+/* whole body css */
 body {
     margin: 0;
     padding: 0;
@@ -10,45 +11,346 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background-color: #0c0c16;
+    background-color: white;
 }
 
+/* Enquiry section box styling - top box */
 .enquiry-section{
     margin-top: 68px;
     background-color: purple;
     padding: 60px 0;
     text-align: center;
-    border: 5px solid #F59E0B;
     border-radius: 0 0 60px 60px ;
-    box-shadow: 0 24px 60px rgba(222, 142, 4, 0.9);
 }
 
+/* Enquiry section heading styling */
 .enquiry-section h2 {
-    color: #ffffff;
+    color: white;
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 0.9rem;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
 }
 
+/* Enquiry section paragraph styling */
 .enquiry-section p {
-    color: #e3daff;
+    color: white;
     font-size:1.4rem;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    word-spacing: 0.4em;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-
 }
+
+/* Contact section styling - background  */
 .contact{
     padding: 2.5rem;
-    background-color: #06060a;
+    background-color: white;
 }
 
+/* All Text color inside the form  reset to black  */
+.contact * {
+    color: black !important;
+}
+
+/* All Link inside the form to  blue color */
+.contact a{
+    color: blue !important;
+}
+
+/* Whole outer box design */
 .contact .row {
-    border: 5px solid #F59E0B;
-    border-radius: 60px 60px ;
-    box-shadow: 0 24px 60px rgba(222, 142, 4, 0.9);
+    padding: 20px;
+    border-radius: 50px 50px ;
     overflow: hidden;
+    border: 2px solid black;
 }
 
+/* left contacts heading */
+.contact .col-md-4 h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+/* Design for individual contact details */
+.contacts-detail {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 0.2rem;
+    padding-left: 0.9rem;
+    border-left: 6px solid red;
+    margin-bottom: 3rem;
+}
+
+/* Sub-headings of contact details */
+.contacts-detail span {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: white;
+    padding-bottom: 12px;
+}
+
+/* Links within contact details */
+.contacts-detail a {
+    color: black !important;
+    text-decoration: none;
+    border-bottom: 5px solid rgba(2, 132, 199, 0.3);
+    transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+/* Hover effect for contact detail links */
+.contacts-detail a:hover {
+    color: blue !important;
+    border-color: red;
+} 
+
+/* Paragraphs inside contact details */
+.contacts-detail p {
+    margin: 0;
+}
+
+/* Right-Side form details */
+.contact .col-md-8 {
+    background-color: white;
+    padding: 65px;
+}
+
+/* Field name above inputs in form details */
+.form-label {
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+/* Style for form  feilds */
+.form-control,
+.form-select {
+    background-color: white;
+    border: 0.2rem solid black;
+    border-radius: 10px;
+    color: white;
+    padding: 0.7rem 1rem;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Placeholder text styling */
+.form-control::placeholder {
+    color: #6b6482;
+}
+
+/* Unselected for dropdown select menu */
+.form-select {
+    color: #6b6482;
+}
+
+/* Hover effects for form fields */
+.form-control:hover,
+.form-select:hover {
+    border-color: #7c5cff;
+}
+
+/* Focus when user clciks into an input field */
+.form-control:focus,
+.form-select:focus {
+    background-color: #211d2c;
+    color: #f4f2fa;
+    border-color: #7c5cff;
+    box-shadow: 0 0 0 4px rgba(124, 92, 255, 0.2);
+    outline: none;
+}
+
+/* Helping text appearance below input */
+.form-text {
+    font-size: 0.78rem;
+    color: #6b6482;
+    margin-top: 0.3rem;
+}
+
+/* Mobile focusing layput - Stacks elements vertically */
+.project-budget-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Desktop and tablets layout */
+@media (min-width: 768px) {
+    .project-budget-options {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    /* Makes both input fields to take equal space */
+    .project-budget-options > .mb-3 {
+        flex: 1;
+    }
+}
+
+/* Desktop layout for Checkbox Choices */
+@media (min-width: 768px) {
+    .consent-group {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Desktop layout for Checkbox Choices */
+@media (min-width: 768px) {
+    .consent-group {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Mobile layout for Checkbox Choices */
+.consent-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+/* style for checkboxes individually */
+.form-check-input {
+    background-color: #211d2c;
+    border-color: #322c42;
+    accent-color: #7c5cff;
+    cursor: pointer;
+}
+
+/* Text label near checkboxes */
+.form-check-label {
+    font-size: 0.9rem;
+    color: #c9c1e0;
+    cursor: pointer;
+}
+
+/* Submit Button Styling */
+.btn-dark {
+    background-color: #211d2c;
+    border: 1.5px solid #322c42;
+    color: #ffffff;
+    border-radius: 999px;
+    padding: 0.8rem 2.4rem;
+    font-weight: 600;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Submit Button Hover Effect */
+.btn-dark:hover {
+    background-color: #7c5cff;
+    border-color: #7c5cff;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(124, 92, 255, 0.35);
+}
+
+/* Active clicking effect for submit button */
+.btn-dark:active {
+    transform: translateY(1px);
+}
+
+/* Second Reset button styling */
+.btn-outline-dark {
+    border-radius: 999px;
+    border: 1.5px solid #322c42;
+    color: #c9c1e0;
+    background: transparent;
+    padding: 0.8rem 2rem;
+    transition: all 0.25s ease;
+}
+
+/* Reset Button Hover Effect */
+.btn-outline-dark:hover {
+    border-color: #7c5cff;
+    color: #7c5cff;
+}
+
+/* Error messages styling */
+.first-name-error-message,
+.last-name-error-message,
+.email-error-message,
+.phone-number-error-message,
+.project-error-message,
+.project-budget-error-message,
+.project-details-error-message,
+.agreed-info-error-message,
+.agreed-enquiry-error-message {
+    color: #ff6b9d;
+    font-size: 0.8rem;
+    margin-top: 0.35rem;
+    min-height: 1rem;
+}
+
+/* Red border highlight for invalid form fields */
+.form-control[aria-invalid="true"],
+.form-select[aria-invalid="true"] {
+    border-color: #ff6b9d;
+    border-width: 2px;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #0e0c14;
+    color: #6b6482;
+    font-size: 0.85rem;
+}
+
+/* ==========================================================
+    Responsive
+   ========================================================== */
+
+@media (max-width: 767px) {
+    .contact .col-md-4,
+    .contact .col-md-8 {
+        padding: 2rem 1.75rem;
+    }
+}
+
+/* Keyboard focus states for navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #7c5cff;
+    outline-offset: 2px;
+}
+
+
+/* Floating Scroll Up / Down Buttons Styling */
+/* Fixed Container in Bottom-Right Corner */
+.scroll-buttons {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 9999; /* Keeps buttons above all other page content */
+}
+
+/* Base Button Styles */
+.scroll-buttons button {
+    width: 45px;
+    height: 45px;
+    background-color: #7c5cff; /* Theme purple background */
+    color: #ffffff;            /* White arrow icon */
+    border: 2px solid #ffffff;  /* White border outline */
+    border-radius: 50%;         /* Circular buttons */
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    opacity: 0.85;
+}
+
+/* Hover & Focus Animation */
+.scroll-buttons button:hover {
+    opacity: 1;
+    background-color: #5b3bd9;
+    transform: scale(1.1); /* Subtle grow effect */
+}
+
+/* Keyboard accessibility outline */
+.scroll-buttons button:focus-visible {
+    outline: 3px solid #F59E0B;
+    outline-offset: 2px;
+}
