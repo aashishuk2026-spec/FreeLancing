@@ -25,19 +25,19 @@
   <div class="collapse navbar-collapse" id="navbarnav">
     <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
       <li class="nav-item mx-5" >
-        <a class="nav-link active" aria-current="page" href="#home"><h4>Home</h4></a>
+        <a class="nav-link active" aria-current="page" href="home.html"><h4>Home</h4></a>
       </li>
       <li class="nav-item mx-5" >
-        <a class="nav-link active" href="#portfolio">Portfolio</a>
+        <a class="nav-link active" href="portfolio.html">Portfolio</a>
       </li>
         <li class="nav-item mx-5" >
-            <a class="nav-link active" href="#team">Team</a>
+            <a class="nav-link active" href="team.html">Team</a>
         </li>
         <li class="nav-item mx-5">
-            <a class="nav-link  active" href="#testimonials">Testimonials</a>
+            <a class="nav-link  active" href="testimonials.html">Testimonials</a>
         </li>
         <li class="nav-item mx-5">
-            <a class="nav-link active" href="#contact">Contact</a>
+            <a class="nav-link active" href="contact.html">Contact</a>
         </li>
     </ul>
    </div>
@@ -47,7 +47,7 @@
     <main>
      <section class="page-hero" aria-labelledby="hero-heading" text-center py-5>
         <div class="row justify-content-center">
-            <div class="col-lg-8">
+            <div class="text-center mb-5">
                 <div class="team-hero">
                     <h4 class="text-uppercase text-muted">The People</h4>
                     <h1 class="display-4 fw-bold" id="hero-heading">Meet the Team</h1>
@@ -112,16 +112,18 @@
             </div>
             <div class="row g-4">
                     <div class="col-md-4">
-                        <div class ="card h-100 border-0 bg-light p-4 roundeed-3 text-center">
+                        <div class ="card h-100 border-0 bg-light p-4 roundeed-3 text-center value-card">
                             <div class="card-body">
+                                <div class="card-body">
                                 <h3 class=" h5 fw-bold mb-3">Craft First</h3>
                                 <p class="text-secondary mb-0">We don't ship things we're not proud of. Every pixel, every interaction, every line of code is considered.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                      <div class="col-md-4">
-                        <div class ="card h-100 border-0 bg-light p-4 roundeed-3 text-center">
+                        <div class ="card h-100 border-0 bg-light p-4 roundeed-3 text-center value-card">
                             <div class="card-body">
                                 <h3 class=" h5 fw-bold mb-3">Collaboration</h3>
                                 <p class="text-secondary mb-0">We believe in the power of teamwork. Together, we achieve more than we ever could alone.</p>
@@ -129,7 +131,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class ="card h-100 border-0 bg-light p-4 roundeed-3 text-center">
+                        <div class ="card h-100 border-0 bg-light p-4 roundeed-3 text-center value-card">
                             <div class="card-body">
                                 <h3 class=" h5 fw-bold mb-3">Always Learning</h3>
                                 <p class="text-secondary mb-0">The industry moves fast. We stay curious, keep experimenting, and share what we discover with the community.</p>
@@ -138,23 +140,27 @@
                     </div>
             </div>
 
-            <div class="banner">
-                    <h4>Want to work with us?</h4>
-                    <p>We're always open to interesting projects and great conversations.</p>
-                    <a href="contact.html" class="banner-cta">Start a project</a>
-                 </div>
+            <div class="banner bg-dark text-white rounded-4 p-5 text-center shadow-lg">
+                <h3 class="display-6 fw-bold mb-3">Want to work with us?</h3>
+                <p class="lead text-light opacity-75 mb-4 mx-auto col-md-8">
+                 We're always open to interesting projects and great conversations.
+                </p>
+                <a href="contact.html" class="btn btn-light btn-lg px-4 py-2 rounded-pill fw-semibold banner-btn">
+                 Start a project
+                </a>
+                </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-content">
-            <p>&copy; 2024 Glitch.And Grit. All rights reserved.</p>
-            <ul class="footer-links" role="list">
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms of Service</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+    <footer class="site-footer bg-light border-top py-4 mt-auto">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p class="text-secondary small mb-0">&copy; 2026 Glitch & Grit. All rights reserved.</p>
+        <ul class="footer-links list-unstyled d-flex gap-4 mb-0" role="list">
+        <li><a href="privacy.html" class="text-decoration-none text-secondary small footer-link">Privacy Policy</a></li>
+        <li><a href="terms.html" class="text-decoration-none text-secondary small footer-link">Terms of Service</a></li>
+        <li><a href="contact.html" class="text-decoration-none text-secondary small footer-link">Contact</a></li>
+        </ul>
         </div>
-     </footer>
+    </footer>
 </body>
 </html>
