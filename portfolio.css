@@ -14,7 +14,7 @@ h2.display {
 }
 p.leads {
     font-size: 20px;
-    color:rgba(232, 221, 217, 0.918);
+    color:rgba(245, 239, 237, 0.918);
     padding: 10px;
 }
 
@@ -26,15 +26,50 @@ div.filters.mt-4 {
     button{
         margin: 0 10px;
         padding: 10px 20px;
-        border: bold 2px solid #fc9a4a;
-        background-color: #fc9a4a;
-        color: #eae3e3;
+        border: bold 2px solid #6f53f9;
+        background-color: #68dae9;
+        color: #f9f8f8;
         font-size: 16px;
         cursor: pointer;
         transition: background-color 0.3s ease;
        
     }
 }
+.showcase-section {
+    background-color: rgb(130, 199, 239);
+    color: #fff;
+}
+
+.showcase-subtitle {
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+.showcase-card {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid #222;
+}
+
+.showcase-card:hover {
+    transform: translateY(-5px);
+    background: #222;
+}
+
+.project-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background: #262626;
+}
+
 footer {
     position: fixed;
     bottom: 0;
