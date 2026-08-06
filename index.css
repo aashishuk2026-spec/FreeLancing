@@ -1,0 +1,35 @@
+#bg-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+h1.display-4 , p.lead {
+    color: rgba (255, 255, 255, 0.8);
+    animation: fadeLoop 3s ease-in-out infinite;
+}
+
+@keyframes fadeLoop {
+    0%, 100% {
+        opacity: 0;
+    }
+    25%, 75% {
+        opacity: 1;
+    }
+}
