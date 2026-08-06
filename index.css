@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
 #bg-video{
     position: fixed;
     top: 0;
@@ -20,9 +28,22 @@ footer {
 }
 
 
+h1.display-4 {
+    font-size: 45px;
+    font-weight: bold;
+    font-family:Times New Roman, Times, serif;
+    color: rgb(28, 250, 221);
+    
+    
+}
+p.lead {
+    font-size: 20px;
+    color:rgba(232, 221, 217, 0.918);
+    padding: 10px;
+}
 h1.display-4 , p.lead {
-    color: rgba (255, 255, 255, 0.8);
-    animation: fadeLoop 3s ease-in-out infinite;
+     color: rgba (255, 255, 255, 0.8);
+     animation: fadeLoop 5s ease-in-out infinite;
 }
 
 @keyframes fadeLoop {
@@ -33,3 +54,11 @@ h1.display-4 , p.lead {
         opacity: 1;
     }
 }
+
+a.btn.btn-primary {
+    background-color: #fc9a4a;
+    border-color: #fc9a4a;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+
