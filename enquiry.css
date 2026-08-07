@@ -1,5 +1,7 @@
+/* Google fonts Import*/
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
+/* Main colors and variables for webpage */
 :root{
     --primary: #0d6efd;
     --primary-dark: #0b5ed7;
@@ -16,18 +18,20 @@
     --radius:22px;
 }
 
+/* CSS Reset of webpage */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
+/* Main page styling - body */
 body {
-
     font-family: "Space Grotesk",sans-serif;
     background:
     radial-gradient(circle at top left,#8adce4,#5ebbc7);
@@ -36,6 +40,7 @@ body {
     overflow-x: hidden;
 }
 
+/* custom scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -44,24 +49,31 @@ body {
     background: #dbe4ec;
 }
 
+/* Scrollbar thumb styling */
+Hero section
 ::-webkit-scrollbar-thumb {
     background: #0d6efd;
     border-radius: 30px;
 }
 
+/* Scrollbar thumb hover effect */
+hero content
 ::-webkit-scrollbar-thumb:hover {
     background: #084298;
 }
 
+/* text highlight color */
 ::selection {
     background: #0d6efd;
     color: #fff;
 }
 
+/* Top enquiry banner section */
 .enquiry-section {
     padding: 90px 0 70px;
 }
 
+/* Top Main Container */
 .enquiry-section .container {
     background: rgba(255,255,255,.75);
     backdrop-filter: blur(20px);
@@ -72,16 +84,18 @@ body {
     animation:floatHero 6s ease-in-out infinite;
 }
 
+/* CSS styling for top enquiry box inside */
 .enquiry-section h2 {
     font-size: 3.3rem;
     font-weight: 800;
     background:
     linear-gradient(90deg,#0d6efd,#00b4d8);
-    /* -webkit-background-clip:text; */
+    background-clip: text;
     color: transparent;
     margin-bottom: 20px;
 }
 
+/* Text under main title */
 .enquiry-section p {
     color: #64748b;
     font-size: 1.1rem;
@@ -89,3 +103,186 @@ body {
     margin: auto;
     line-height: 1.8;
 }
+
+/* Service highlights styling */
+.service-highlights {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.service-highlights span {
+    padding: 8px 16px;
+    border: 1px solid rgba(13,110,253,.2);
+    border-radius: 50px;
+    background: rgba(255,255,255,.7);
+    color: #0d6efd;
+    font-size: .9rem;
+    font-weight: 600;
+    transition: transform .25s ease, background-color .25s ease, box-shadow .25s ease;
+}
+
+.service-highlights span:hover {
+    transform: translateY(-3px);
+    background: #ffffff;
+    box-shadow: 0 8px 18px rgba(13,110,253,.15);
+}
+
+/* Contact section - left side styling */
+.contact {
+    padding: 70px 0;
+}
+
+
+.contact .row {
+    background: rgba(255,255,255,.92);
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: box-shadow .35s ease, transform .35s ease;
+}
+
+.contact .row:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Contact information styling */
+.contact .col-md-4 {
+    background: linear-gradient(180deg,#0d6efd,#084298);
+    color: white;
+    padding: 50px 35px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* bg styling of left column */
+.contact .col-md-4::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.08);
+    right: -70px;
+    top: -70px;
+}
+
+.contact .col-md-4::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.06);
+    left: -50px;
+    bottom: -50px;
+}
+.contact .col-md-4 h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Contact details */
+.contacts-detail {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    transition: transform .3s ease, background-color .3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+
+.contacts-detail:hover {
+    background: rgba(255,255,255,.12);
+    transform: translateX(8px);
+}
+
+.contacts-detail span {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .8rem;
+    opacity: .8;
+    margin-bottom: 8px;
+}
+
+.contacts-detail a,
+.contacts-detail p {
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.contacts-detail a:hover {
+    text-decoration: underline;
+}
+
+/* Contact form - right side styling */
+.contact .col-md-8 {
+    padding: 50px;
+}
+.contact form {
+    background: #ffffff;
+    border: 1px solid rgba(219,228,236,.9);
+    border-radius: 22px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.07);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.contact form:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.10);
+}
+
+/* Form input fields styling */
+.form-label {
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+/* Text inputs and dropdown menu styling*/
+.form-control,
+.form-select {
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 15px;
+    background-color: #ffffff;
+    color: var(--dark);
+    transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+
+.form-control:hover,
+.form-select:hover {
+    border-color: #8bbcf7;
+    transform: translateY(-2px);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary);
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(13,110,253,.18);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Form character counting*/
+#message-count {
+    font-size: .85rem;
+    color: #64748b;
+    margin-top: 6px;
+}
+
