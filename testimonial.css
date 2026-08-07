@@ -1,0 +1,22 @@
+:root {
+  --bg-main: #5ebbc7;
+  --bg-card: #151a23;
+  --bg-card-hover: #1c222f;
+  --bg-navbar: rgba(11, 14, 20, 0.85);
+
+  --accent-gold: #e2c275;
+  --accent-gold-dark: #b89443;
+  --gold-gradient: linear-gradient(135deg, #f3e5ab 0%, #e2c275 50%, #b89443 100%);
+  --gold-glow: rgba(226, 194, 117, 0.18);
+
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-subtle: rgba(226, 194, 117, 0.15);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  padding-top: 90px;
+}
