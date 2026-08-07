@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --primary: #0d6efd;
+    --primary-dark: #0b5ed7;
+    --secondary: #5ebbc7;
+    --dark: #1e293b;
+    --dark-light: #334155;
+    --white: #ffffff;
+    --light: #f8fafc;
+    --border:#dbe4ec;
+    --shadow:
+    0 15px 45px rgba(0,0,0,.10);
+    --shadow-hover:
+    0 25px 55px rgba(0,0,0,.18);
+    --radius:22px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: "Space Grotesk",sans-serif;
+    background:
+    radial-gradient(circle at top left,#8adce4,#5ebbc7);
+    color: var(--dark);
+    padding-top: 90px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dbe4ec;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0d6efd;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #084298;
+}
+
+::selection {
+    background: #0d6efd;
+    color: #fff;
+}
+
+.enquiry-section {
+    padding: 90px 0 70px;
+}
+
+.enquiry-section .container {
+    background: rgba(255,255,255,.75);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding: 70px 50px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    animation:floatHero 6s ease-in-out infinite;
+}
+
+.enquiry-section h2 {
+    font-size: 3.3rem;
+    font-weight: 800;
+    background:
+    linear-gradient(90deg,#0d6efd,#00b4d8);
+    /* -webkit-background-clip:text; */
+    color: transparent;
+    margin-bottom: 20px;
+}
+
+.enquiry-section p {
+    color: #64748b;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+}
