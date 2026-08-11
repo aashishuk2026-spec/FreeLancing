@@ -104,50 +104,69 @@ $(document).ready(function () {
         status.trigger("focus");
     }
 
+    // Handle form submission
+form.on("submit", function (event) {
 
-    // Handle what happens when clicking submit
-    form.on("submit", function (event) {
+    event.preventDefault();
 
-        event.preventDefault();
+    // Check the form before saving it
+    const formIsValid = window.validateForm();
 
-        // Check validation rules from validation.js
-        const formIsValid = window.validateForm();
+    if (formIsValid) {
 
-        if (formIsValid) {
+        // Save the completed enquiry
+        window.saveForm(true);
 
-            // Save form data using storage.js
-            window.saveForm(true);
+        // Tell the user that the enquiry was submitted
+        showSuccessMessage();
 
-            // Show green success alert
-            showSuccessMessage();
+        // Remove validation borders
+        $(".form-control, .form-select, .form-check-input")
+            .removeClass("is-valid is-invalid");
 
-            // Clear out all typed inputs
-            form[0].reset();
+        // Small submission animation
+        form.addClass("form-submitted");
 
-            // Clear our blue highlight colors
-            $(".form-control, .form-select").each(function () {
-                this.style.removeProperty("background-color");
-                this.style.removeProperty("border-color");
-            });
+        setTimeout(function () {
+            form.removeClass("form-submitted");
+        }, 700);
 
-            // Remove red/green borders from validation
-            $(".form-control, .form-select").removeClass("is-valid is-invalid");
+    } else {
 
-            // Put counter back to zero
-            updateCharacterCount();
+        // Show an error message
+        showFormError();
 
-            // Small animation effect on submit
-            form.addClass("form-submitted");
-            setTimeout(function () {
-                form.removeClass("form-submitted");
-            }, 700);
+    }
 
-        } else {
+});
 
-            // Show error message if validation fails
-            showFormError();
+// Reset the form
+resetButton.on("click", function () {
 
-        }
+    // Clear everything in the form
+    form[0].reset();
 
-    });
+    // Remove validation colours
+    $(".form-control, .form-select, .form-check-input")
+        .removeClass("is-valid is-invalid");
+
+    // Remove all error messages
+    $("[role='alert']").text("");
+
+    // Remove the success or error message
+    status
+        .removeClass("text-success text-danger")
+        .hide()
+        .text("");
+
+    // Reset the character counter
+    updateCharacterCount();
+
+    // Remove the saved form data
+    if (typeof window.clearSavedForm === "function") {
+        window.clearSavedForm();
+    }
+
+});
+
 });
