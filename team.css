@@ -1,6 +1,14 @@
 body{
   padding: 80px;
 }
+.page-hero p,
+.team-section p,
+.hero-sub,
+.text-secondary {
+  color: #000000 !important;
+  font-size: 1.15rem;
+  opacity: 0.95;
+}
 .team-card{
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -45,17 +53,11 @@ body{
 
 :root {
   --bg-main:#178582;
-  --bg-card: #151a23;
-  --bg-card-hover: #1c222f;
-  --bg-navbar: rgba(11, 14, 20, 0.85);
+  --bg-card: #607cb1;
 
   --accent-gold: #e2c275;
-  --accent-gold-dark: #b89443;
-  --gold-gradient: linear-gradient(135deg, #f3e5ab 0%, #e2c275 50%, #b89443 100%);
-  --gold-glow: rgba(243, 212, 139, 0.18);
 
   --text-main: #000001;
-  --text-muted: #94a3b8;
   --border-subtle: rgba(226, 194, 117, 0.15);
 }
 
@@ -104,13 +106,10 @@ footer {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 12px;
+  background-color: var(--bg-card, #6e84ae);
 }
 
-.flip-card-front {
-  background-color: #ffffff;
-  transform: rotateY(0deg);
-}
 .flip-card-back {
-  background-color: #ffffff;
+  background-color: #ab7373;
   transform: rotateY(180deg);
 }
