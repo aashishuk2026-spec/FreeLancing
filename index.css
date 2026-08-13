@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+body{
+    margin: 0;
+    min-height: 100%;
+    display: flex;
+  flex-direction: column;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
 #bg-video{
     position: fixed;
     top: 0;
@@ -10,6 +21,16 @@
     z-index: -1;
 }
 
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+.content {
+  flex: 1;
+  
+}
 
 footer {
     position: fixed;
@@ -17,12 +38,26 @@ footer {
     left: 0;
     width: 100%;
     z-index: 1000;
+    text-align: center;
 }
 
 
+h1.display-4 {
+    font-size: 45px;
+    font-weight: bold;
+    font-family:Times New Roman, Times, serif;
+    color: rgb(28, 250, 221);
+    
+    
+}
+p.lead {
+    font-size: 20px;
+    color:rgba(232, 221, 217, 0.918);
+    padding: 10px;
+}
 h1.display-4 , p.lead {
-    color: rgba (255, 255, 255, 0.8);
-    animation: fadeLoop 3s ease-in-out infinite;
+     color: rgba (255, 255, 255, 0.8);
+     animation: fadeLoop 5s ease-in-out infinite;
 }
 
 @keyframes fadeLoop {
@@ -32,4 +67,52 @@ h1.display-4 , p.lead {
     25%, 75% {
         opacity: 1;
     }
+}
+
+a.btn.btn-primary {
+    background-color: #fc9a4a;
+    border-color: #fc9a4a;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+
+.cookie-box {
+    border-radius: 16px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+    animation: cookiePop 0.35s ease-out;
+}
+
+@keyframes cookiePop {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.cookie-box .modal-title {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.cookie-box .modal-body {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+.cookie-box .btn-primary {
+    background: #007bff;
+    border-radius: 8px;
+}
+
+.cookie-box .btn-outline-secondary {
+    border-radius: 8px;
 }
