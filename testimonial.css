@@ -1,17 +1,16 @@
 :root {
   --bg-main: #178582;
-  --bg-card: #151a23;
-  --bg-card-hover: #1c222f;
-  --bg-navbar: rgba(11, 14, 20, 0.85);
+  --theme-teal: #178582;
 
   --accent-gold: #e2c275;
   --accent-gold-dark: #b89443;
-  --gold-gradient: linear-gradient(135deg, #f3e5ab 0%, #e2c275 50%, #b89443 100%);
-  --gold-glow: rgba(226, 194, 117, 0.18);
+  --card-bg: #ffffff;
 
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
-  --border-subtle: rgba(226, 194, 117, 0.15);
+  --text-dark: #1a202c;
+  --text-light: #e2e8f0;
+  --pill-bg: #e2e8f0;
 }
 
 body {
@@ -25,17 +24,28 @@ body {
   background-color: var(--theme-teal);
   color: #BFA181;
 }
-.eyebrow-badge {
-  display: block;
+.eyebrow-badge,
+.section-label {
+  display: inline-block;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--theme-teal-dark);
+  color: var(--accent-gold);
   margin-bottom: 0.5rem;
 }
 .gold-text,
-.page-hero h1,
+.page-hero h1 {
+  color: var(--text-dark);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.hero-sub {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 600px;
+}
 .section-header h2 {
   color: #000000 !important;
   background: none !important;
@@ -120,14 +130,14 @@ body {
 
 .testimonial-card {
   background-color: #ffffff;
-  border-radius: 12px;
-  padding: 1.75rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s ease;
+  color: #1e293b;  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .testimonial-card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .rating-stars {
@@ -140,6 +150,8 @@ body {
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
+  background-color: var(--accent-gold-dark, #b89443);
+  color: #ffffff;
 }
 .client-name {
   font-weight: 700;
@@ -154,4 +166,34 @@ body {
   color: #334155;
   font-size: 0.95rem;
   line-height: 1.6;
+}
+.testimonial-quote {
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.testimonial-avatar,
+.slide-avatar {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
 }
