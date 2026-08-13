@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     const $contrastBtn = $("#contrast-toggle-btn");
     
-    // checks if the user hat prevoiusly rurend on high contrast or not
+    // checks prevoius contrast
     if (localStorage.getItem("site_contrast") === "high") {
         $("body").addClass("high-contrast");
         $contrastBtn.text("👁️ Normal Contrast");
@@ -30,7 +30,6 @@ $(document).ready(function () {
     const status = $("#enquiry-status");
     const resetButton = form.find("button[type='button'], button[type='reset']");
 
-    // Interactive styling to forms
     $(".form-control, .form-select").on("mouseenter focus input", function () {
         this.style.setProperty("background-color", "#e7f1ff", "important");
         this.style.setProperty("border-color", "#0d6efd", "important");
@@ -40,7 +39,6 @@ $(document).ready(function () {
         });
     });
 
-    // Reset color when mouse leave if it is empty
     $(".form-control, .form-select").on("mouseleave blur", function () {
         const field = $(this);
 
@@ -115,7 +113,7 @@ $(document).ready(function () {
         const formIsValid = (typeof window.validateForm === "function") ? window.validateForm() : true;
 
         if (formIsValid) {
-            // 1. Read and trim all input values FIRST before resetting
+            // Reads all before resetting
             const firstNameVal = $.trim($("#first-name").val());
             const lastNameVal = $.trim($("#last-name").val());
             const emailVal = $.trim($("#email").val());
@@ -135,28 +133,24 @@ $(document).ready(function () {
                 details: detailsVal
             };
 
-            // 2. Saces submission to local storage
             if (typeof window.saveSubmittedEnquiry === "function") {
                 window.saveSubmittedEnquiry(completedEnquiry);
             }
 
-            // Generates and saves autoamted mail locally
             if (typeof window.logLocalConfirmationEmail === "function") {
                 window.logLocalConfirmationEmail(completedEnquiry);
             }
 
-            // clears the draft form data storage
             if (typeof window.clearSavedForm === "function") {
                 window.clearSavedForm();
             }
             localStorage.removeItem("gg_enquiry");
 
-            // Retrive updated list from stored submissions
             const allSubmissions = (typeof window.getValidSubmissions === "function") 
                 ? window.getValidSubmissions() 
                 : [];
 
-            // Display sucess message when submitted sucessfully
+            // sucess messegae when submitted
             status
                 .stop(true, true)
                 .removeClass("text-danger d-none")
@@ -184,7 +178,7 @@ $(document).ready(function () {
                 .hide()
                 .fadeIn(400);
 
-            // Reset input feilds and clears draft
+            // Resets form nad feild
             form[0].reset();
             details.val("");
 
@@ -200,12 +194,12 @@ $(document).ready(function () {
             $("[role='alert']").text("");
             updateCharacterCount();
 
-            // Automatically removes sucess notification 
+            // removing sucess notification
             setTimeout(function () {
                 status.fadeOut(500)
             }, 30000);
 
-            // Return focus to first name field
+            // Back to focus on first name
             $("#first-name").focus();
 
         } else {
@@ -214,7 +208,7 @@ $(document).ready(function () {
 
     });
 
-    // Resetsvand clears form
+    // Saved form reset
     resetButton.on("click", function () {
         form[0].reset();
         details.val("");

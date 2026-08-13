@@ -36,7 +36,7 @@ $(document).ready(function () {
         localStorage.setItem(storageKey, JSON.stringify(enquiryData));
     };
 
-    // Load form on window
+    // Loads form on window
     window.loadForm = function () {
         const savedData = localStorage.getItem(storageKey);
 
@@ -72,7 +72,7 @@ $(document).ready(function () {
         localStorage.removeItem(storageKey);
     };
 
-    // Saves the written previously data and laods it
+    // Saves the prevoius data and laods it
     loadForm();
     $("form").on("input change", "input, select, textarea", function () {
         window.saveForm(false);
@@ -105,7 +105,7 @@ $(document).ready(function () {
         }
     };
 
-    // Saves form submission with shared unique ID and shared expiration time
+    // Saves form submission with unique ID
     window.saveSubmittedEnquiry = function (enquiryData) {
         const activeSubmissions = window.getValidSubmissions();
 
@@ -123,7 +123,7 @@ $(document).ready(function () {
         activeSubmissions.push(newEntry);
         localStorage.setItem("gg_submitted_list", JSON.stringify(activeSubmissions));
 
-        // Automatically links email with ID
+        // Automatice links email with ID
         window.logLocalConfirmationEmail(newEntry);
     }
 

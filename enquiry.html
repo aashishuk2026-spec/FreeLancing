@@ -16,7 +16,7 @@
 
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
         <div class="container-fluid">
-            <img src="logo_image/gglogo.png" alt="Logo" width="50" height="50" class="d-inline-block rounded-circle align-text-top me-2">
+            <img src="images/gglogo.png" alt="Logo" width="50" height="50" class="d-inline-block rounded-circle align-text-top me-2">
             <a class="navbar-brand" href="index.html"><h4>Glitch & Grit</h4></a>
             <button class="navbar-toggler" 
                 type="button" 
@@ -39,17 +39,18 @@
                     <a class="nav-link active" href="team.html">Team</a>
                 </li>
                 <li class="nav-item mx-5">
-                    <a class="nav-link  active" href="testimonial.html">Testimonials</a>
+                    <a class="nav-link active" href="testimonial.html">Testimonials</a>
                 </li>
                 <li class="nav-item mx-5">
                     <a class="nav-link active" href="enquiry.html">Contact</a>
                 </li>
             </ul>
         </div>
+        </div>
     </nav>
 
-    <!-- Hight contrast button for user who can't see in lower contrast -->
-    <div>
+    <!-- High contrast feature -->
+    <div class="container mt-2">
         <button type="button" id="contrast-toggle-btn" style="background:none; border:1px solid #64748b; padding:6px 12px; border-radius:6px; cursor:pointer; font-weight:600; font-size: 0.85rem;" aria-label="Toggle High Contrast Mode">👁️ High Contrast</button>
     </div>
     
@@ -72,7 +73,6 @@
             </div>
         </section>
 
-            
         <section class="contact">
             <div class="container">
                 <!-- Left column: Contact Information -->
@@ -98,7 +98,7 @@
                             <p>Within 2 working days</p>
                         </div>
                     </div>
-        
+    
                     <!-- Right column: Enquiry Form -->
                     <div class="col-md-8">
                         <form novalidate>
@@ -124,7 +124,7 @@
                             </div>
 
                             <div class="mb-3">
-                                    <label for="phone-number" class="form-label">Phone Number (optional)</label>
+                                <label for="phone-number" class="form-label">Phone Number (optional)</label>
                                 <input type="tel" id="phone-number" name="Phone" class="form-control" placeholder="+44 7123 456789" autocomplete="tel" aria-describedby="phone-number-error">
                                 <p id="phone-number-error" class="phone-number-error-message" role="alert" aria-live="polite"></p>
                             </div>
@@ -147,28 +147,27 @@
 
                             <div class="mb-3">
                                 <label for="project-budget" class="form-label">Project Budget *</label>
-                                    <select id="project-budget" name="projectBudget" class="form-select" aria-describedby="project-budget-error">
-                                        <option value="">Choose one...</option>
-                                        <option value="low">Under £4,000</option>
-                                        <option value="medium">£4,000 - £10,000</option>
-                                        <option value="high">£10,000 - £20,000</option>
-                                        <option value="very-high">£20,000 +</option>
-                                    </select>
-                                    <p id="project-budget-error" class="project-budget-error-message" role="alert" aria-live="polite"></p>
+                                <select id="project-budget" name="projectBudget" class="form-select" aria-describedby="project-budget-error">
+                                    <option value="">Choose one...</option>
+                                    <option value="low">Under £4,000</option>
+                                    <option value="medium">£4,000 - £10,000</option>
+                                    <option value="high">£10,000 - £20,000</option>
+                                    <option value="very-high">£20,000 +</option>
+                                </select>
+                                <p id="project-budget-error" class="project-budget-error-message" role="alert" aria-live="polite"></p>
                             </div>
 
                             <div class="mb-3">
                                 <label for="project-timeline" class="form-label">Project Timeline *</label>
-                                    <select id="project-timeline" name="projectTimeline" class="form-select" aria-describedby="project-timeline-error">
-                                        <option value="">Choose one...</option>
-                                        <option value="urgent">Within 4 weeks</option>
-                                        <option value="short">1 - 2 months</option>
-                                        <option value="medium">2 - 5 months</option>
-                                        <option value="long">5+ months</option>
-                                    </select>
-                                    <p id="project-timeline-error" class="project-timeline-error-message" role="alert" aria-live="polite"></p>
+                                <select id="project-timeline" name="projectTimeline" class="form-select" aria-describedby="project-timeline-error">
+                                    <option value="">Choose one...</option>
+                                    <option value="urgent">Within 4 weeks</option>
+                                    <option value="short">1 - 2 months</option>
+                                    <option value="medium">2 - 5 months</option>
+                                    <option value="long">5+ months</option>
+                                </select>
+                                <p id="project-timeline-error" class="project-timeline-error-message" role="alert" aria-live="polite"></p>
                             </div>
-
 
                             <div class="mb-3">
                                 <label for="project-details" class="form-label">Project Details *</label>
@@ -214,13 +213,10 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- Custom JS -->
-    <!-- validation js-->
     <script src="validation.js"></script>
 
-    <!-- storage js -->
     <script src="storage.js"></script>
-
-    <!-- enquiry js -->
+    
     <script src="enquiry.js"></script>
 
 </body>

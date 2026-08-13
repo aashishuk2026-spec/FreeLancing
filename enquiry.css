@@ -11,10 +11,8 @@
     --white: #ffffff;
     --light: #f8fafc;
     --border:#dbe4ec;
-    --shadow:
-    0 15px 45px rgba(0,0,0,.10);
-    --shadow-hover:
-    0 25px 55px rgba(0,0,0,.18);
+    --shadow: 0 15px 45px rgba(0,0,0,.10);
+    --shadow-hover: 0 25px 55px rgba(0,0,0,.18);
     --radius:22px;
 }
 
@@ -25,7 +23,6 @@
     box-sizing: border-box;
 }
 
-/* smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
@@ -33,8 +30,7 @@ html {
 /* Main page styling - body */
 body {
     font-family: "Space Grotesk",sans-serif;
-    background:
-    radial-gradient(circle at top left,#4fd1c5,#2cb67d);
+    background: radial-gradient(circle at top left,#4fd1c5,#2cb67d);
     color: var(--dark);
     padding-top: 90px;
     overflow-x: hidden;
@@ -48,13 +44,11 @@ body {
     background: #dbe4ec;
 }
 
-Hero section
 ::-webkit-scrollbar-thumb {
     background: #0d6efd;
     border-radius: 30px;
 }
 
-hero content
 ::-webkit-scrollbar-thumb:hover {
     background: #084298;
 }
@@ -78,21 +72,20 @@ hero content
     padding: 70px 50px;
     text-align: center;
     box-shadow: var(--shadow);
-    animation:floatHero 6s ease-in-out infinite;
 }
 
-/* CSS styling for top enquiry box inside */
+/* styling for top box */
 .enquiry-section h2 {
     font-size: 3.3rem;
     font-weight: 800;
-    background:
-    linear-gradient(90deg,#0d6efd,#00b4d8);
+    background: linear-gradient(90deg,#0d6efd,#00b4d8);
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     margin-bottom: 20px;
 }
 
-/* Text under main title */
+/* main title */
 .enquiry-section p {
     color: #64748b;
     font-size: 1.1rem;
@@ -101,7 +94,7 @@ hero content
     line-height: 1.8;
 }
 
-/* Service highlights styling */
+/* Highlighting services */
 .service-highlights {
     display: flex;
     justify-content: center;
@@ -131,7 +124,6 @@ hero content
 .contact {
     padding: 70px 0;
 }
-
 
 .contact .row {
     background: rgba(255,255,255,.92);
@@ -177,6 +169,7 @@ hero content
     left: -50px;
     bottom: -50px;
 }
+
 .contact .col-md-4 h2 {
     font-size: 2rem;
     font-weight: 700;
@@ -194,7 +187,6 @@ hero content
     position: relative;
     z-index: 2;
 }
-
 
 .contacts-detail:hover {
     background: rgba(255,255,255,.12);
@@ -226,6 +218,7 @@ hero content
 .contact .col-md-8 {
     padding: 50px;
 }
+
 .contact form {
     background: #ffffff;
     border: 1px solid rgba(219,228,236,.9);
@@ -234,6 +227,7 @@ hero content
     box-shadow: 0 10px 30px rgba(0,0,0,.07);
     transition: transform .3s ease, box-shadow .3s ease;
 }
+
 .contact form:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 35px rgba(0,0,0,.10);
@@ -246,7 +240,6 @@ hero content
     margin-bottom: 8px;
 }
 
-/* Text inputs and dropdown menu styling*/
 .form-control,
 .form-select {
     border: 2px solid var(--border);
@@ -333,7 +326,7 @@ textarea.form-control {
     box-shadow: 0 0 0 3px rgba(13,110,253,.18);
 }
 
-/* Buttons submit and reset styling */
+/* Submit button and reset */
 .contact .btn {
     border-radius: 12px;
     padding: 11px 24px;
@@ -401,13 +394,12 @@ textarea.form-control {
     .form-select {
         font-size: 16px;
     }
-
     .contact .btn {
         width: 100%;
     }
 }
 
-/* Hight contrast styling */
+/* High contrast styling */
 body.high-contrast {
     background: #000000 !important;
     color: #ffff00 !important;
