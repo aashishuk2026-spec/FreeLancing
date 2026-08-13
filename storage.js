@@ -139,7 +139,7 @@ $(document).ready(function () {
             projectRequested: submission.project,
             budgetListed: submission.budget,
             subject: "Confirmation: Enquiry Received for " + submission.project,
-            body: "Hello " + submission.name + ",\n\n" +
+            body: "Hello " + submission.namgite + ",\n\n" +
                 "Thank you for submitting the form regarding your enquiry" + submission.project + ".\n" +
                 "we have entered your request regarding your enquiry" + submission.budget + ".\n\n" +
                 "Best regards for your project,\n" +

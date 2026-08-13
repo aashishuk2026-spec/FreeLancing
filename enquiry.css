@@ -30,7 +30,7 @@ html {
 /* Main page styling - body */
 body {
     font-family: "Space Grotesk",sans-serif;
-    background: radial-gradient(circle at top left,#4fd1c5,#2cb67d);
+    background: radial-gradient(circle at top left, #178582);
     color: var(--dark);
     padding-top: 90px;
     overflow-x: hidden;
